@@ -1,0 +1,17 @@
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\bin\Debug\net6.0\Project2_Group4.exe
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\bin\Debug\net6.0\Project2_Group4.deps.json
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\bin\Debug\net6.0\Project2_Group4.runtimeconfig.json
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\bin\Debug\net6.0\Project2_Group4.dll
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\bin\Debug\net6.0\Project2_Group4.pdb
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\bin\Debug\net6.0\CsvHelper.dll
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.csproj.AssemblyReference.cache
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.AssemblyInfoInputs.cache
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.AssemblyInfo.cs
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.csproj.CoreCompileInputs.cache
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.csproj.CopyComplete
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.dll
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\refint\Project2_Group4.dll
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.pdb
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\Project2_Group4.genruntimeconfig.cache
+D:\Downloads\Project2_Group4-master\Project2_Group4-master\Project2_Group4\obj\Debug\net6.0\ref\Project2_Group4.dll

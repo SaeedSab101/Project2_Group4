@@ -10,35 +10,6 @@ namespace Project2_Group4
 {
     public class CSVFile
     {
-        public List<T> CSVDeserialize<T>(string filePath)
-        {
-            var result = new List<T>();
-
-            using (var reader = new StreamReader(filePath))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    var values = line.Split(',');
-                    var obj = Activator.CreateInstance<T>();
-
-                    for (int i = 0; i < values.Length; i++)
-                    {
-                        var propertyInfo = typeof(T).GetProperty($"Column{i + 1}");
-                        if (propertyInfo != null)
-                        {
-                            var convertedValue = Convert.ChangeType(values[i], propertyInfo.PropertyType);
-                            propertyInfo.SetValue(obj, convertedValue);
-                        }
-                    }
-
-                    result.Add(obj);
-                }
-            }
-
-            return result;
-        }
-
         public List<Infix> populateList(string filePath)
         {
             // SORRY I DDINT NOTICE THE CSVFILE CLASS UNTIL AFTER I DID HTIS, JUST REPLACE IF YOUR VERSION WORKS TOO

@@ -64,9 +64,7 @@ namespace Project2_Group4
                 output.Push(operators.Pop());
             }
 
-            // Reverse the output stack to get prefix expression
             char[] prefix = output.ToArray();
-            Array.Reverse(prefix);
 
             return new string(prefix);
         }
