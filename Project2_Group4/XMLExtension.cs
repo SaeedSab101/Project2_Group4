@@ -9,36 +9,41 @@ namespace Project2_Group4
 {
     public static class XMLExtension
     {
-        public static void WriteStartDocument(this XmlWriter writeStart, string encoding)
+        public static void WriteStartElement(this StreamWriter startElement, string name)
         {
-            encoding = "UTF-8";
-            writeStart.WriteStartDocument();
-            writeStart.WriteProcessingInstruction("xml", $"version=\"1.0\" encoding=\"{encoding}\"");
+            startElement.Write($"<{name}>");
         }
 
-        public static void WriteStartRootElement(this XmlWriter writeStartRoot, string rootElementName)
+        public static void WriteEndElement(this StreamWriter endElement, string name)
         {
-            writeStartRoot.WriteStartElement(rootElementName);
+            endElement.Write($"</{name}>");
         }
 
-        public static void WriteEndRootElement(this XmlWriter writeEndRoot)
+        public static void WriteElement(this StreamWriter writeElement, string name, string value)
         {
-            writeEndRoot.WriteEndElement();
+            writeElement.WriteStartElement(name);
+            writeElement.Write(value);
+            writeElement.WriteEndElement(name);
         }
 
-        public static void WriteStartElement(this XmlWriter writeStartEle, string elementName)
+        public static void WriteRootStart(this StreamWriter rootStart)
         {
-            writeStartEle.WriteStartElement(elementName);
+            rootStart.WriteStartElement("root");
         }
 
-        public static void WriteEndElement(this XmlWriter writeEndEle)
+        public static void WriteRootEnd(this StreamWriter rootEnd)
         {
-            writeEndEle.WriteEndElement();
+            rootEnd.WriteEndElement("root");
         }
 
-        public static void WriteAttribute(this XmlWriter writeAttr, string attributeName, string attributeValue)
+        public static void WriteElementsStart(this StreamWriter elementsStart)
         {
-            writeAttr.WriteAttributeString(attributeName, attributeValue);
+            elementsStart.WriteStartElement("elements");
+        }
+
+        public static void WriteElementsEnd(this StreamWriter elementsEnd)
+        {
+            elementsEnd.WriteEndElement("elements");
         }
     }
 }

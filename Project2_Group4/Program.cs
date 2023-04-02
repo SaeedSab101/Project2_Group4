@@ -3,6 +3,8 @@
  */
 using CsvHelper;
 using CsvHelper.Configuration;
+using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
@@ -17,10 +19,10 @@ namespace Project2_Group4
             PostfixConversion postConverter = new();
             PrefixConversion preConverter = new();
             CompareExpressions comparer = new();
-            
+
             // 1. 
             List<Infix> inFixList = csvFile.populateList(filePath);
-           
+
             // 2. Convert Infix expressions stored in the InFix list to prefix expressions and save them in a generic list named PreFix
             List<string> postFixList = new List<string>(); // will contain postfix expressions
             List<string> preFixList = new List<string>(); // will contain prefix expressions
@@ -45,19 +47,30 @@ namespace Project2_Group4
             }
             Console.WriteLine("==========================================================================================================");
 
-            //foreach (Infix inFix in inFixList)
-            //{
-            //    postfix = postConverter.Convert(inFix.expression);
-            //    prefix = preConverter.Convert(inFix.expression);
-            //    postfixRes = ExpressionEvaluation.evaluatePostfix(postfix);
-            //    prefixRes = ExpressionEvaluation.evaluatePrefix(prefix);
-            //    Console.WriteLine(inFix.expression + "  ------  " + postfix + "  ----  " + prefix + "  ----  " + postfixRes + "  ----  " + prefixRes + "  ----  " + (comparer.Compare(postfixRes, prefixRes) == 0 ? "True" : "False"));
-            //    postFixList.Add(postfix);
-            //    preFixList.Add(prefix);
-            //}
+            using (StreamWriter writer = new StreamWriter("ExpressionEvaluationSummary.xml"))
+            {
+                writer.WriteRootStart();
 
+                for (int i = 0; i < inFixList.Count; i++)
+                {
+                    postfix = postFixList[i];
+                    prefix = preFixList[i];
+                    postfixRes = ExpressionEvaluation.evaluatePostfix(postfix);
+                    prefixRes = ExpressionEvaluation.evaluatePrefix(prefix);
+
+                    writer.WriteElementsStart();
+                    writer.WriteElement("sno", (i + 1).ToString());
+                    writer.WriteElement("infix", inFixList[i].expression);
+                    writer.WriteElement("prefix", prefix);
+                    writer.WriteElement("postfix", postfix);
+                    writer.WriteElement("evaluation", postfixRes.ToString());
+                    writer.WriteElement("comparison", (comparer.Compare(postfixRes, prefixRes) == 0 ? "true" : "false"));
+                    writer.WriteElementsEnd();
+                }
+
+                writer.WriteRootEnd();
+            }
 
         }
-
     }
 }
