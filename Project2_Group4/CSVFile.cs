@@ -10,9 +10,9 @@ namespace Project2_Group4
 {
     public class CSVFile
     {
+        // open up the CSV file
         public List<Infix> populateList(string filePath)
         {
-            // SORRY I DDINT NOTICE THE CSVFILE CLASS UNTIL AFTER I DID HTIS, JUST REPLACE IF YOUR VERSION WORKS TOO
 
             List<Infix> infixList = new();
 
@@ -29,12 +29,13 @@ namespace Project2_Group4
                 foreach (var record in records)
                 {
                     // Access the fields of the record using the dynamic keyword
-                    var field1 = record.sno;
+                    var field1 = record.sno; //unused
                     var field2 = record.infix;
                     Infix tempInfix = new(field2);
                     infixList.Add(tempInfix);
                 }
             }
+            // return the csv in ordinary notation
             return infixList;
         }
     }

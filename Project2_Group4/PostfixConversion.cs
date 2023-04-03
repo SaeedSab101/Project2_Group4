@@ -8,6 +8,7 @@ namespace Project2_Group4
 {
     public class PostfixConversion
     {
+        // define the operator presedence
         static int Precedence(char op)
         {
             switch (op)
@@ -24,11 +25,12 @@ namespace Project2_Group4
                     return -1;
             }
         }
+        // take in an infix post, and turn it to postfix
         public string Convert(string infix)
         {
             string postfix = "";
             Stack<char> stack = new Stack<char>();
-
+            // iterate through string chars
             for (int i = 0; i < infix.Length; i++)
             {
                 char c = infix[i];
@@ -59,6 +61,7 @@ namespace Project2_Group4
                 }
                 else
                 {
+                    // check precedence and compare for stack operation
                     while (stack.Count > 0 && Precedence(c) <= Precedence(stack.Peek()))
                     {
                         postfix += stack.Pop();

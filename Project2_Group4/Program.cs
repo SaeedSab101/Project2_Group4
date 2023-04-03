@@ -1,5 +1,8 @@
 ﻿/*
-    1. Install-Package CsvHelper 
+    PROGRAM: Project 2, Group 4 | infix, prefix, postfix, xml
+    PROGRAMMERS: 
+    DATE: 
+    
  */
 using CsvHelper;
 using CsvHelper.Configuration;
@@ -20,7 +23,7 @@ namespace Project2_Group4
             PrefixConversion preConverter = new();
             CompareExpressions comparer = new();
 
-            // 1. 
+            // 1. Populate List with infix expressions
             List<Infix> inFixList = csvFile.populateList(filePath);
 
             // 2. Convert Infix expressions stored in the InFix list to prefix expressions and save them in a generic list named PreFix
@@ -39,7 +42,7 @@ namespace Project2_Group4
             {
                 postfix = postConverter.Convert(inFixList[i].expression);
                 prefix = preConverter.Convert(inFixList[i].expression);
-                postfixRes = ExpressionEvaluation.evaluatePostfix(postfix);
+                postfixRes = ExpressionEvaluation.evaluatePostfix(postfix); 
                 prefixRes = ExpressionEvaluation.evaluatePrefix(prefix);
                 postFixList.Add(postfix);
                 preFixList.Add(prefix);
