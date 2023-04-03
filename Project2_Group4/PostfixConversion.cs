@@ -1,35 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Project2_Group4
+﻿namespace Project2_Group4
 {
     public class PostfixConversion
     {
         // define the operator presedence
         static int Precedence(char op)
         {
-            switch (op)
+            return op switch
             {
-                case '+':
-                case '-':
-                    return 1;
-                case '*':
-                case '/':
-                    return 2;
-                case '^':
-                    return 3;
-                default:
-                    return -1;
-            }
+                '+' or '-' => 1,
+                '*' or '/' => 2,
+                '^' => 3,
+                _ => -1,
+            };
         }
         // take in an infix post, and turn it to postfix
-        public string Convert(string infix)
+        public static string Convert(string infix)
         {
             string postfix = "";
-            Stack<char> stack = new Stack<char>();
+            Stack<char> stack = new();
             // iterate through string chars
             for (int i = 0; i < infix.Length; i++)
             {

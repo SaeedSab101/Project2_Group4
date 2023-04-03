@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using CsvHelper;
 using CsvHelper.Configuration;
+
 namespace Project2_Group4
 {
     public class CSVFile
     {
         // open up the CSV file
-        public List<Infix> populateList(string filePath)
+        public static List<Infix> PopulateList(string filePath)
         {
 
             List<Infix> infixList = new();

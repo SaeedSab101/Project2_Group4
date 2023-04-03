@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Project2_Group4
+﻿namespace Project2_Group4
 {
     public class PrefixConversion
     {
-        public string Convert(string infix)
+        public static string Convert(string infix)
         {
             // Reverse the infix expression
             char[] reversed = infix.Reverse().ToArray();
 
             // Initialize the output and operator stacks
-            Stack<char> output = new Stack<char>();
-            Stack<char> operators = new Stack<char>();
+            Stack<char> output = new();
+            Stack<char> operators = new();
 
             // Define a helper function to check operator precedence
-            int Precedence(char op) => op switch
+            static int Precedence(char op) => op switch
             {
                 '+' or '-' => 1,
                 '*' or '/' or '%' => 2,
