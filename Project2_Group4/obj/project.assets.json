@@ -5,10 +5,14 @@
       "CsvHelper/30.0.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/CsvHelper.dll": {}
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/CsvHelper.dll": {}
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -45,30 +49,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\forea\\.nuget\\packages\\": {},
-    "Z:\\VISUAL_STUDOSDK\\NuGetPackages": {}
+    "C:\\Users\\h_khattar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\Project2_Group4\\Project2_Group4\\Project2_Group4.csproj",
+      "projectUniqueName": "C:\\Users\\h_khattar\\Downloads\\Project2_Group4-master\\Project2_Group4\\Project2_Group4.csproj",
       "projectName": "Project2_Group4",
-      "projectPath": "Z:\\Project2_Group4\\Project2_Group4\\Project2_Group4.csproj",
-      "packagesPath": "C:\\Users\\forea\\.nuget\\packages\\",
-      "outputPath": "Z:\\Project2_Group4\\Project2_Group4\\obj\\",
+      "projectPath": "C:\\Users\\h_khattar\\Downloads\\Project2_Group4-master\\Project2_Group4\\Project2_Group4.csproj",
+      "packagesPath": "C:\\Users\\h_khattar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\h_khattar\\Downloads\\Project2_Group4-master\\Project2_Group4\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "Z:\\VISUAL_STUDOSDK\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\forea\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\h_khattar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\MyNuGet": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -99,7 +99,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -108,7 +109,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
